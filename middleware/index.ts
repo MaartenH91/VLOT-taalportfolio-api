@@ -11,13 +11,14 @@ const registerMiddleware = (app: Router) => {
   if (process.env.ENV === "PRODUCTION" || process.env.ENV === "production") {
     console.log("cors shizzle")
     const corsOptions = {
-      origin: 'https://taalportfolio-app-be578389f89b.herokuapp.com',
+      origin: '*',
       methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
       optionsSuccessStatus: 200,
       credentials: true,
     };
     // allows CORS online
     app.use(cors(corsOptions));
+    console.log("use of corsoptions")
   } else {
     app.use(cors());
   }
