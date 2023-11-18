@@ -8,16 +8,16 @@ import { Application, NextFunction, Request, Response, Router } from "express";
 const registerMiddleware = (app: Router) => {
   // use CORS middleware
   // add "allow all" cors
-  if (process.env.ENV === "PRODUCTION" || process.env.ENV === "production") {
-    const corsOptions = {
-      origin: '*',
-      optionsSuccessStatus: 200,
-    };
+  //if (process.env.ENV === "PRODUCTION" || process.env.ENV === "production") {
+  //  const corsOptions = {
+  //    origin: '*',
+  //    optionsSuccessStatus: 200,
+  //  };
     // allows CORS online
-    app.use(cors(corsOptions));
-  } else {
-    app.use(cors());
-  }
+  //  app.use(cors(corsOptions));
+  //} else {
+  //  app.use(cors());
+  //}
   // JSON is going to be the default format
   app.use(bodyParser.json());
   app.use(
