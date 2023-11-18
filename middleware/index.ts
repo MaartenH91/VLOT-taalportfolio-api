@@ -9,8 +9,9 @@ const registerMiddleware = (app: Router) => {
   // use CORS middleware
   // add "allow all" cors
   if (process.env.ENV === "PRODUCTION" || process.env.ENV === "production") {
+    console.log("cors shizzle")
     const corsOptions = {
-      origin: '*',
+      origin: 'https://taalportfolio-app-be578389f89b.herokuapp.com',
       methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
       optionsSuccessStatus: 200,
       credentials: true,
