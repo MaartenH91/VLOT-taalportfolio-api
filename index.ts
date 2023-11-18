@@ -22,7 +22,7 @@ AppDataSource.initialize()
     // start express server
     app.listen(process.env.PORT || 3001);
 
-    if (process.env.ENV === "development") {
+    if (process.env.ENV === "production") {
       console.log(`App has started on http://localhost:${process.env.PORT}`);
     }
   })
