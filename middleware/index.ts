@@ -9,13 +9,16 @@ const registerMiddleware = (app: Router) => {
   // use CORS middleware
   // add "allow all" cors
   if (process.env.ENV === "PRODUCTION" || process.env.ENV === "production") {
+    console.log("cors shizzle")
     const corsOptions = {
       origin: '*',
-      method: ['GET', 'POST', 'OPTIONS', 'HEAD'],
+      methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
       optionsSuccessStatus: 200,
+      credentials: true,
     };
     // allows CORS online
     app.use(cors(corsOptions));
+    console.log("use of corsoptions")
   } else {
     app.use(cors());
   }
