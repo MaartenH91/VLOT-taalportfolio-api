@@ -11,6 +11,7 @@ const registerMiddleware = (app: Router) => {
   if (process.env.ENV === "PRODUCTION" || process.env.ENV === "production") {
     const corsOptions = {
       origin: '*',
+      method: ['GET', 'POST', 'OPTIONS', 'HEAD'],
       optionsSuccessStatus: 200,
     };
     // allows CORS online
