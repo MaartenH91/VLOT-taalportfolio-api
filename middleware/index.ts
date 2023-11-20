@@ -10,10 +10,18 @@ const registerMiddleware = (app: Router) => {
   // add "allow all" cors
   if (process.env.ENV === "PRODUCTION" || process.env.ENV === "production") {
     const corsOptions = {
-      origin: '*',
-      methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH', 'OPTIONS'],
+      allowedHeaders: [
+        'Origin',
+        'X-Requested-With',
+        'Content-Type',
+        'Accept',
+        'X-Access-Token',
+      ],
+      credentials: true,
+      methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
+      origin: process.env.API_URL,
+      preflightContinue: false,
       optionsSuccessStatus: 200,
-      credentials: false,
     };
     // allows CORS online
     app.use(cors(corsOptions));
