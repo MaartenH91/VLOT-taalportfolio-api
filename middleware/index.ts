@@ -13,7 +13,7 @@ const registerMiddleware = (app: Router) => {
       origin: '*',
       methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH', 'OPTIONS'],
       optionsSuccessStatus: 200,
-      credentials: true,
+      credentials: false,
     };
     // allows CORS online
     app.use(cors(corsOptions));
