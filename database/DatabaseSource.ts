@@ -49,10 +49,10 @@ export const AppDataSource = new DataSource({
   ],
   migrations: [],
   subscribers: [],
-  ssl:
-    process.env.ENV === "PRODUCTION"
-      ? {
-          rejectUnauthorized: false,
-        }
-      : false,
+  // ssl:
+  //   process.env.ENV === "PRODUCTION"
+  //     ? {
+  //         rejectUnauthorized: false,
+  //       }
+  //     : false,
 });
