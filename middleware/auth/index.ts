@@ -38,6 +38,7 @@ const authJwt = passportWithErrorHandling("jwt");
 // Creates a JWT token for the user that will expire in the number of hours specified in the .env file
 // The token wil keep track of the user
 const createToken = (user: User) => {
+  console.log("create jwt")
   return jwt.sign({ id: user.id, user: user.email }, process.env.JWT_SECRET, {
     expiresIn: parseInt(process.env.JWT_EXPIRES_IN_HOURS) * 60 * 60,
   });
