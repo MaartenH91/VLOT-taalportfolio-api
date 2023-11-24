@@ -6,6 +6,7 @@ import UserService from "./User.service";
 export default class AuthController {
   login = async (req: AuthRequest, res: Response, next: NextFunction) => {
     // Don't show password
+    console.log("login - autcontroller")
     const { user } = req;
     const userService =  new UserService();
     const userData = await userService.findOne(user.id);
