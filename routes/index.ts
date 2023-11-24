@@ -31,6 +31,7 @@ const useMethod =
       console.log("try?")
       await func(req, res, next);
     } catch (err) {
+      console.log("error: " + err)
       next(err);
     }
   };
@@ -38,6 +39,7 @@ const useMethod =
 // Routes that are not protected by authJWT
 const registerOnboardingRoutes = (router: Router) => {
   // Register onboarding routes
+  // console.log("hier misschien iets?") -> OK!
   const authController = new AuthController();
   router.post("/login", authLocal, useMethod(authController.login));
 };
