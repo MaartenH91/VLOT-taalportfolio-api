@@ -38,6 +38,7 @@ const useMethod =
 const registerOnboardingRoutes = (router: Router) => {
   // Register onboarding routes
   const authController = new AuthController();
+  console.log("hier misschien iets?")
   router.post("/login", authLocal, useMethod(authController.login));
 };
 
