@@ -4,6 +4,7 @@ import { AuthRequest } from "../../middleware/auth/auth.types";
 import UserService from "./User.service";
 
 export default class AuthController {
+  console.log("nieuwe authcontroller")
   login = async (req: AuthRequest, res: Response, next: NextFunction) => {
     // Don't show password
     console.log("login - autcontroller")
