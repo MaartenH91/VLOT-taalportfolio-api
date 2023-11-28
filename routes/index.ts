@@ -39,10 +39,10 @@ const useMethod =
 // Routes that are not protected by authJWT
 const registerOnboardingRoutes = (router: Router) => {
   // Register onboarding routes
-  console.log("hier misschien iets?")
+  // console.log("hier misschien iets?") ok
   const authController = new AuthController();
-  console.log("geraak ik hier?")
-  console.log("created new authcontroller: " + authController)
+  // console.log("geraak ik hier?") ok
+  console.log("created new authcontroller: " + JSON.stringify(authController))
   router.post("/login", authLocal, useMethod(authController.login));
 };
 

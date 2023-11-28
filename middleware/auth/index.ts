@@ -14,6 +14,7 @@ passport.use("jwt", JwtStrategy);
 // This is a wrapper for passport.authenticate that handles errors
 const passportWithErrorHandling = (strategy: any) => {
   return function (req, res: Response, next: NextFunction) {
+    console.log("passportwitherrorhandling")
     passport.authenticate(
       strategy,
       { session: false },
