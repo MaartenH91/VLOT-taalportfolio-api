@@ -42,9 +42,9 @@ const registerOnboardingRoutes = (router: Router) => {
   // console.log("hier misschien iets?") ok
   const authController = new AuthController();
   // console.log("geraak ik hier?") ok
-  console.log("created new authcontroller: " + JSON.stringify(authController))
+  // console.log("created new authcontroller: " + JSON.stringify(authController)) -> lege authcontroller aangemaakt
   router.post("/login", authLocal, useMethod(authController.login));
-  console.log("login?")
+  // console.log("login?") -> ok
 };
 
 const registerAuthenticatedRoutes = (router: Router) => {

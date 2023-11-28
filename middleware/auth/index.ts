@@ -8,7 +8,7 @@ import { NextFunction, Response } from "express";
 import User from "../../modules/User/User.entity";
 import { UserRole } from "../../modules/User/User.constants";
 
-// passport.use("local", LocalStrategy);
+passport.use("local", LocalStrategy);
 passport.use("jwt", JwtStrategy);
 
 // This is a wrapper for passport.authenticate that handles errors
