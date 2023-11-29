@@ -25,6 +25,7 @@ export default new LocalStrategy(
       // Wrong email and password combination. Not allowed
       return done(null, null);
     } catch (e) {
+      console.log("error localstrat")
       return done(e, null);
     }
   }
