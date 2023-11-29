@@ -7,8 +7,11 @@ export default new LocalStrategy(
     try {
       // find user with email
       const userService = new UserService();
+      console.log("Localstrat")
       const user = await userService.findByEmailWithPassword(email);
+      console.log(user)
       if (user) {
+
         // If found, check if password matches
         const check = await user.checkPassword(password);
         if (check) {
