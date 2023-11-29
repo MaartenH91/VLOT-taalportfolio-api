@@ -11,8 +11,8 @@ const registerMiddleware = (app: Router) => {
   if (process.env.ENV === "PRODUCTION" || process.env.ENV === "production") {
     const corsOptions = {
       origin: '*',
-      methods: '*',
-   //   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH', 'OPTIONS'],
+      // methods: '*',
+      methods: 'GET,POST,DELETE,UPDATE,PUT,PATCH,OPTIONS',
       optionsSuccessStatus: 200,
       credentials: true,
     };
