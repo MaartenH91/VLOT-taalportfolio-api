@@ -13,6 +13,7 @@ const registerMiddleware = (app: Router) => {
       origin: '*',
       // methods: '*',
       methods: 'GET,POST,DELETE,UPDATE,PUT,PATCH,OPTIONS',
+      allowedHeaders: 'Access-Control-Request-Headers,Access-Control-Request-Method',
       optionsSuccessStatus: 200,
       credentials: true,
     };
