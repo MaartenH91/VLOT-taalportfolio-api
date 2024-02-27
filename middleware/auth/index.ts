@@ -51,6 +51,7 @@ const withRole = (roles: UserRole) => (req, res, next) => {
   const { user } = req;
 
   if (roles.includes(user.rol)) {
+    console.log("NEXT")
     next();
   } else {
     console.log("error?")
