@@ -685,6 +685,8 @@ const registerRoutes = (app: Router) => {
   // Authenticated routes
   registerAuthenticatedRoutes(app);
 
+  registerStudentRoutes(app)
+
   // Fallback route
   app.use((req: Request, res: Response, next: NextFunction) => {
     next(new NotFoundError());
