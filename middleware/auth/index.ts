@@ -21,12 +21,15 @@ const passportWithErrorHandling = (strategy: any) => {
       { session: false },
       function (err: any, user: User) {
         if (err) {
+          console.log("error auth - " + err)
           return next(err);
         }
         if (!user) {
+          console.log("no user)")
           return next(new AuthError());
         } else {
           req.user = user;
+          console.log(user)
           return next();
         }
       }
