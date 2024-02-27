@@ -91,7 +91,7 @@ export default class TaalprofielAntwoordController {
         Number(req.params.selectedYear),
         grade
       );
-      console.log("taalprofielantwoorden?")
+      console.log(taalprofielAntwoorden)
     return res.json(taalprofielAntwoorden);
   };
 
