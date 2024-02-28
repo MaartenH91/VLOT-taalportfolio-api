@@ -687,6 +687,10 @@ const registerRoutes = (app: Router) => {
 
   registerStudentRoutes(app)
 
+  registerAdminRoutes(app)
+
+  registerTeacherRoutes(app)
+
   // Fallback route
   app.use((req: Request, res: Response, next: NextFunction) => {
     next(new NotFoundError());
