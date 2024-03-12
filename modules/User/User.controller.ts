@@ -35,10 +35,13 @@ export default class UserController {
     res: Response,
     next: NextFunction
   ) => {
+    console.log("before check")
     if (!req.user.isAdmin()) {
+      console.log("check failed")
       return new ForbiddenError();
     }
     const users = await this.userService.all({ ...req.body });
+    console.log(users)
     return res.json(users);
   };
 
