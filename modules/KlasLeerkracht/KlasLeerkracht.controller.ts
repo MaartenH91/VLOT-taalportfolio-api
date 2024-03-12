@@ -22,6 +22,7 @@ export default class KlasLeerkrachtController {
     }
 
     const klassen = await this.klasLeerkrachtService.all({ ...req.body });
+    console.log(klassen)
     return res.json(klassen);
   };
 
