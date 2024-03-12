@@ -685,11 +685,11 @@ const registerRoutes = (app: Router) => {
   // Authenticated routes
   registerAuthenticatedRoutes(app);
 
-  registerStudentRoutes(app)
+  // registerStudentRoutes(app)
 
-  registerAdminRoutes(app)
+  // registerAdminRoutes(app)
 
-  registerTeacherRoutes(app)
+  // registerTeacherRoutes(app)
 
   // Fallback route
   app.use((req: Request, res: Response, next: NextFunction) => {
