@@ -3,7 +3,7 @@ import "dotenv/config";
 import * as express from "express";
 import { AppDataSource } from "./database/DatabaseSource";
 import { registerErrorHandler, registerMiddleware } from "./middleware";
-import { registerRoutes } from "./routes";
+import { registerRoutes } from "./routes/index";
 
 // initialize database
 AppDataSource.initialize()
