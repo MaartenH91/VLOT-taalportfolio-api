@@ -17,9 +17,9 @@ export default new LocalStrategy(
         if (check) {
           // Correct email anc password conbination. Pass user to request
           const user = await userService.findOneBy({
-            console.log(email)
             email: email,
           });
+          console.log(user)
           return done(null, user);
         }
       }
