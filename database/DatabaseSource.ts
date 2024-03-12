@@ -52,7 +52,7 @@ export const AppDataSource = new DataSource({
   ssl:
     process.env.ENV === "PRODUCTION"
       ? {
-          rejectUnauthorized: false,
+          rejectUnauthorized: true,
         }
       : false,
 });
