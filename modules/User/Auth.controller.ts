@@ -10,6 +10,7 @@ export default class AuthController {
     const { user } = req;
     const userService =  new UserService();
     const userData = await userService.findOne(user.id);
+    console.log(userData)
 
     return res.json({
       user: userData,
